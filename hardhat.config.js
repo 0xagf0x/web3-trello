@@ -9,7 +9,7 @@ module.exports = {
       chainId: 1337, 
     },
     goerli: {
-      url: process.env.INFURA_GOERLI_ENDPOINT,
+      url: process.env.ALCHEMY_ENDPOINT,
       accounts: [process.env.PRIVATE_KEY]
     }
   }
