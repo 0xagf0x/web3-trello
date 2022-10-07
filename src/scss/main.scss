@@ -7,6 +7,7 @@ html,
 body{
     margin: 0;
     height: 100%;
+    position: relative;
 }
 
 body {
@@ -28,6 +29,10 @@ button {
     padding: 0 12px;
     white-space: nowrap;
     cursor: pointer;
+}
+
+.d-none {
+    display: none !important;
 }
 
 .page {
@@ -124,16 +129,24 @@ button {
     width: 100%;
     margin-top: 1rem;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    padding: 12px 0;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, .2);
+    height: 100vh;
 
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 44px;
+    .inner {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding: 12px 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 44px;
+        height: fit-content;
+    }
 
     .main_col {
         padding: 12px;
@@ -180,4 +193,37 @@ button {
             }
         }
     }
+}
+
+.footer {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .links-container {
+        display: flex;
+        align-items: center;
+        
+        .twitter-link {
+            max-width: 48px;
+            margin-right: 3rem;
+
+            img {
+                width: 100%;
+                max-width: 24px;
+            }
+        }
+
+        .alchemy-link {
+            max-width: 250px;
+
+            img {
+                max-width: 248px;
+            }
+        }
+    }
+
+   
 }

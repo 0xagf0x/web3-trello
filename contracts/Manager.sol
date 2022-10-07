@@ -42,11 +42,7 @@ contract Manager {
         return tickets;
     }
 
-    // function deleteTicket(uint _index) external {
-    //     delete tickets[_index];
-    // }
-
-    function destroyContract() public onlyOwner {
-        selfdestruct(owner);
+    function deleteTicket(uint _index) public {
+        delete tickets[_index];
     }
 }

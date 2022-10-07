@@ -16,7 +16,6 @@ To deploy:
 
 */
 
-// deployed to:  0xDaba8744f0a2af91e807fCd8DF46BCf358fd6C84
 
 
 const hre = require("hardhat");
@@ -24,8 +23,6 @@ const hre = require("hardhat");
 async function main() {
   const ManagerContract = await hre.ethers.getContractFactory('Manager');
   const managerContract = await ManagerContract.deploy();
-
-  // deploy
   await managerContract.deployed();
   console.log("Manager Contract deployed to:", managerContract.address)
 }

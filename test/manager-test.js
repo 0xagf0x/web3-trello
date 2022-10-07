@@ -41,5 +41,4 @@ describe("Manager contract", function() {
         expect(tickets.length).to.equal(4);
     });
 
-
 });
