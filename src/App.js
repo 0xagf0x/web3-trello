@@ -124,11 +124,19 @@ function App() {
                 type="text" 
                 placeholder='Enter Ticket Description'
               /> */}
-              <button 
+              {name === ''? 
+                <button 
+                className='create-btn disabled' 
+                disabled
+                >Create Ticket</button>
+              :
+                <button 
                 className='create-btn' 
                 onClick={() => createNewTicket(name)}
                 
                 >Create Ticket</button>
+              }
+              
               {isLoading? 
                 <img className='loading-gif' src={loadingGif}  alt="loading gif"/>
               : 
