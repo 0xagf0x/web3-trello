@@ -29,6 +29,7 @@ button {
     padding: 0 12px;
     white-space: nowrap;
     cursor: pointer;
+    justify-content: center;
 }
 
 .d-none {
@@ -57,6 +58,7 @@ button {
             display: flex;
             flex-direction: row;
             align-items: center;
+            flex-wrap: wrap;
 
             button, input {
                 border-radius: 5px;
@@ -104,12 +106,26 @@ button {
             .item {
                 margin: 0 24px;
             }
+
+            @media only screen and (max-width: 651px) {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            @media only screen and (max-width: 487px) {
+               .load-data-btn {
+                margin-top: 1rem;
+               }
+            }
         }
 
         .right-item {
             margin-right: 24px;
         }
-         
+    }
+
+    .left {
+        flex-wrap: wrap;
     }
 
     .nav-logo {
@@ -121,6 +137,13 @@ button {
         font-size: 22px;
         line-height: 20px;
         font-weight: 400;
+    }
+
+    @media only screen and (max-width: 895px) {
+       flex-direction: column;
+       padding: 0 22px;
+       padding-top: 22px;
+       align-items: baseline;
     }
 }
 
@@ -176,11 +199,15 @@ button {
 
             .main_ticket_button_section {
                 margin-top: 2rem;
-                display: flex;
+                display: grid;
+                flex-direction: row;
+                grid-template-columns: repeat(auto-fit, minmax(77px, 1fr));
+                grid-gap: 8px;
                 
                 button {
                     margin-right: 8px;
                     background-color: #ebecf0;
+                    max-width: 100px;
 
                     &:hover {
                         box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;

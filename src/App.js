@@ -134,7 +134,7 @@ function App() {
               : 
                 null
               }
-              <button className='item' onClick={getTickets}>Load Data</button>
+              <button className='item load-data-btn' onClick={getTickets}>Load Data</button>
             </div>
         </div>
         <div className='right'>
