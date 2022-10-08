@@ -146,14 +146,14 @@ button {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-gap: 44px;
         height: fit-content;
+        align-items: baseline;
     }
 
     .main_col {
         padding: 12px;
         display: inline-block;
-        height: 100%;
+        height: auto;
         vertical-align: top;
-        white-space: nowrap;
         border-radius: 5px;
         background-color: #ebecf0;
 
@@ -168,7 +168,7 @@ button {
                 width: 100%;
 
                 p {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     font-weight: 700;
                     margin: 0;
                 }
